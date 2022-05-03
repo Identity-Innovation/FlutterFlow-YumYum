@@ -3,14 +3,14 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key key}) : super(key: key);
+class CheckoutBlankWidget extends StatefulWidget {
+  const CheckoutBlankWidget({Key key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+  _CheckoutBlankWidgetState createState() => _CheckoutBlankWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _CheckoutBlankWidgetState extends State<CheckoutBlankWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -38,12 +38,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [],
-              ),
-            ],
+            children: [],
           ),
         ),
       ),

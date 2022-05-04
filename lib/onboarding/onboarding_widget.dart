@@ -40,28 +40,59 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             PageController(initialPage: 0),
                         scrollDirection: Axis.horizontal,
                         children: [
-                          Image.network(
-                            'https://picsum.photos/seed/669/600',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
-                          Image.network(
-                            'https://picsum.photos/seed/650/600',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
-                          Image.network(
-                            'https://picsum.photos/seed/507/600',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
+                          Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.12, 0.01),
+                                child: Text(
+                                  'This is significant',
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 40,
+                                      ),
+                                ),
+                              ),
+                            ],
                           ),
                           Stack(
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.05, 0.86),
+                                alignment: AlignmentDirectional(0.01, -0.02),
+                                child: Text(
+                                  'This is insightful',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 40,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.03, 0.06),
+                                child: Text(
+                                  'This is disarming',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 40,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.02, 0.86),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     await Navigator.push(
@@ -89,6 +120,19 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                     ),
                                     borderRadius: 12,
                                   ),
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  'Now we\'re ready to do the thing!',
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 40,
+                                      ),
                                 ),
                               ),
                             ],

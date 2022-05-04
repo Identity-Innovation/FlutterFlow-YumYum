@@ -32,14 +32,6 @@ class _OnboardingWelcomeWidgetState extends State<OnboardingWelcomeWidget>
       initialState: AnimationState(),
       finalState: AnimationState(),
     ),
-    'imageOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      duration: 600,
-      delay: 1100,
-      fadeIn: true,
-      initialState: AnimationState(),
-      finalState: AnimationState(),
-    ),
     'textOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       duration: 600,
@@ -90,7 +82,10 @@ class _OnboardingWelcomeWidgetState extends State<OnboardingWelcomeWidget>
         height: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFF4B39EF), Color(0xFFEE8B60)],
+            colors: [
+              FlutterFlowTheme.of(context).alternate,
+              FlutterFlowTheme.of(context).tertiaryColor
+            ],
             stops: [0, 1],
             begin: AlignmentDirectional(1, -1),
             end: AlignmentDirectional(-1, 1),
@@ -100,12 +95,12 @@ class _OnboardingWelcomeWidgetState extends State<OnboardingWelcomeWidget>
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/images/ff_logo_white.png',
-              width: 140,
-              height: 140,
+            Image.network(
+              'https://www.mastercard.com.au/en-au/about-mastercard/innovations/digital-id/_jcr_content/contentpar/herolight/image.adaptive.479.high.png/1631685207138.png',
+              width: 200,
+              height: 200,
               fit: BoxFit.fitHeight,
-            ).animated([animationsMap['imageOnPageLoadAnimation']]),
+            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
               child: Text(

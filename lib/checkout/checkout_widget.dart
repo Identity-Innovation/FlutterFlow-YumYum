@@ -507,7 +507,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
             width: double.infinity,
             height: 90,
             decoration: BoxDecoration(
-              color: Color(0xFF4B39EF),
+              color: FlutterFlowTheme.of(context).primaryText,
               boxShadow: [
                 BoxShadow(
                   blurRadius: 4,
